@@ -16,7 +16,7 @@
     "swr": "^0.3.2"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "npm run build && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
