@@ -59,13 +59,13 @@ class BreadCrumb extends React.Component {
                 <div class="divider"> / </div>
                 <a class="section" onClick={this.freshPage}>Fresh </a>
                 <div class="divider"> / </div>
-                <a class="section" onClick={this.RookiePage}>Training</a>
+                <a class="section" onClick={this.TrainingPage}>Training</a>
                 <div class="divider"> / </div>
                 <a class="section" onClick={this.RookiePage }>Rookie</a>
                 <div class="divider"> / </div>
-                <a class="section" onClick={this.UltimatePage}>Champion</a>
+                <a class="section" onClick={this.ChampionPage}>Champion</a>
                 <div class="divider"> / </div>
-                <a class="section" onClick={this.ChampionPage}>Ultimate</a>
+                <a class="section" onClick={this.UltimatePage}>Ultimate</a>
                 <div class="divider"> / </div>
                 <a class="section" onClick={this.MegaPage}>Mega</a>
             </div>

@@ -7,6 +7,8 @@ import BreadCrumb from '../components/BreadCrumb';
 
 import Background from '../images/Wiki-background.jpg';
 
+import './search.css';
+
 var onePage = {
     width: "100%",
     height: "100%",
@@ -32,6 +34,9 @@ class Search extends React.Component{
             this.setState({ search: false});
             this.setState({ images: response.data});
         }else{
+            if(term==="Castando Gelo" || term === "castando gelo" || term === "Castando gelo"){
+                window.location.href='https://castandogelo.home.blog/'
+            }
             const response = await Unsplash.get('/name/' +term,{
             });
             console.log(response.data);
@@ -43,7 +48,8 @@ class Search extends React.Component{
     helperFunction () {
         if ( this.state.search===false){
             return(
-                <div className="ui container" >Search Digimon
+                <div className="ui container" >
+                    <h1 className="search-text">You can Search your favorite Digimons from season 1 and 2 </h1>
                     <SearchBar onSubmit={this.onSearchSubmit}/>
                     <ImageList images={this.state.images}/>
                 </div>
@@ -57,9 +63,9 @@ class Search extends React.Component{
 
     render(){
         return (
-            <section style={ onePage }>
+            <section >
                 <BreadCrumb/>
-                <div className= "render content">{this.helperFunction()}</div>
+                <div style={ onePage } className= "render content">{this.helperFunction()}</div>
             </section>
         );
     }

@@ -33,9 +33,9 @@ class Mega extends React.Component{
 
     render(){
         return (
-            <section style={ onePage }>
+            <section >
                 <BreadCrumb/>
-                <div className= "render content">{this.helperFunction()}</div>
+                <div style={ onePage } className= "render content">{this.helperFunction()}</div>
             </section>
         );
     }

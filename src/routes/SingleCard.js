@@ -1,5 +1,5 @@
 import React from "react";
-import ImageCard from '../components/ImageCard';
+import BreadCrumb from '../components/BreadCrumb';
 import Spinner from '../components/Spinner';
 //import styled from "styled-components";
 
@@ -38,8 +38,10 @@ class First extends React.Component{
     render(){
         if(this.props.location.state){
             return (
-                <div style={ onePage }>
-                    <div class="ui card" onClick={this.doNotChange} style={{gridRowEnd: `span ${this.state.spans}`}}>
+                <div>
+                    <BreadCrumb/>
+                    <div style={ onePage }>
+                    <div class="ui card" onClick={this.doNotChange} style={{marginLeft: "40px",gridRowEnd: `span ${this.state.spans}`}}>
                     <a class="image" href="#">
                         <img 
                             alt={'hello'} 
@@ -53,7 +55,7 @@ class First extends React.Component{
                     </div>
                 </div>
                 </div>
-                
+                </div>
             );
         }else{
             return(<div><Spinner loadText="Searching Digimon"/></div>);
